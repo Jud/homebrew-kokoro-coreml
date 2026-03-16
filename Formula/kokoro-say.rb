@@ -11,11 +11,10 @@ class KokoroSay < Formula
   def install
     system "swift", "build", "-c", "release", "--disable-sandbox"
 
-    # find the actual build products directory (arch-specific path)
     release_dir = Dir[".build/*-apple-macosx/release"].first || ".build/release"
     libexec.install "#{release_dir}/kokoro-say"
     Dir["#{release_dir}/*.bundle"].each { |b| libexec.install b }
-    bin.install_symlink libexec/"kokoro-say"
+    (bin/"kokoro-say").write_env_script libexec/"kokoro-say"
   end
 
   def post_install
