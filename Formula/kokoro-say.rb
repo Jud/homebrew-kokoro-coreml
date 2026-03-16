@@ -14,7 +14,12 @@ class KokoroSay < Formula
     release_dir = Dir[".build/*-apple-macosx/release"].first || ".build/release"
     libexec.install "#{release_dir}/kokoro-say"
     Dir["#{release_dir}/*.bundle"].each { |b| libexec.install b }
-    (bin/"kokoro-say").write_env_script libexec/"kokoro-say"
+
+    # wrapper so Bundle.main resolves to libexec (where the bundles live)
+    (bin/"kokoro-say").write <<~SH
+      #!/bin/bash
+      exec "#{libexec}/kokoro-say" "$@"
+    SH
   end
 
   def post_install
