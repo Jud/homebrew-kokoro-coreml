@@ -10,8 +10,9 @@ class KokoroSay < Formula
 
   def install
     system "swift", "build", "-c", "release", "--disable-sandbox"
-    bin.install ".build/release/kokoro-say"
-    bin.install Dir[".build/**/release/KokoroTTS_KokoroTTS.bundle"].first => "KokoroTTS_KokoroTTS.bundle"
+    libexec.install ".build/release/kokoro-say"
+    Dir[".build/**/release/*.bundle"].each { |b| libexec.install b }
+    bin.install_symlink libexec/"kokoro-say"
   end
 
   def post_install
