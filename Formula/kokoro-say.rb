@@ -11,6 +11,7 @@ class KokoroSay < Formula
   def install
     system "swift", "build", "-c", "release", "--disable-sandbox"
     bin.install ".build/release/kokoro-say"
+    bin.install Dir[".build/**/release/KokoroTTS_KokoroTTS.bundle"].first => "KokoroTTS_KokoroTTS.bundle"
   end
 
   def post_install
