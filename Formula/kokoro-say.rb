@@ -1,7 +1,7 @@
 class KokoroSay < Formula
   desc "Text-to-speech CLI using Kokoro-82M on Apple Neural Engine"
   homepage "https://github.com/Jud/kokoro-tts-swift"
-  url "https://github.com/Jud/kokoro-tts-swift.git", tag: "v0.2.2"
+  url "https://github.com/Jud/kokoro-tts-swift.git", tag: "v0.2.3"
   license "Apache-2.0"
   head "https://github.com/Jud/kokoro-tts-swift.git", branch: "main"
 
