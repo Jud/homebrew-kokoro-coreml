@@ -1,9 +1,9 @@
 class Kokoro < Formula
   desc "Text-to-speech CLI using Kokoro-82M on Apple Neural Engine"
-  homepage "https://github.com/Jud/kokoro-tts-swift"
-  url "https://github.com/Jud/kokoro-tts-swift.git", tag: "v0.3.1"
+  homepage "https://github.com/Jud/kokoro-ane"
+  url "https://github.com/Jud/kokoro-ane.git", tag: "v0.3.1"
   license "Apache-2.0"
-  head "https://github.com/Jud/kokoro-tts-swift.git", branch: "main"
+  head "https://github.com/Jud/kokoro-ane.git", branch: "main"
 
   depends_on :macos
   depends_on xcode: ["16.0", :build]
