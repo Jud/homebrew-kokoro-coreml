@@ -1,5 +1,5 @@
 class Kokoro < Formula
-  desc "Text-to-speech CLI using Kokoro-82M on Apple Neural Engine"
+  desc "Text-to-speech CLI using Kokoro-82M via CoreML on Apple Silicon"
   homepage "https://github.com/Jud/kokoro-coreml"
   url "https://github.com/Jud/kokoro-coreml.git", tag: "v0.3.1"
   license "Apache-2.0"
