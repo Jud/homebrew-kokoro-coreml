@@ -19,8 +19,9 @@ class Kokoro < Formula
   end
 
   def post_install
-    ohai "models (~640MB) will download on first run"
+    ohai "models (~99MB) will download on first run"
     ohai "try: kokoro say \"hello from homebrew\""
+    ohai "multilingual: kokoro say --language fr -v ff_siwis \"bonjour\""
   end
 
   test do
