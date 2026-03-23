@@ -22,7 +22,7 @@ class Kokoro < Formula
   def post_install
     ohai "models (~99MB) will download on first run"
     ohai "try: kokoro say \"hello from homebrew\""
-    ohai "multilingual: kokoro say --language fr -v ff_siwis \"bonjour\""
+    ohai "all voices: kokoro say --list-voices"
   end
 
   test do
