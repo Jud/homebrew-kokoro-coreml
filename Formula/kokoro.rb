@@ -1,6 +1,7 @@
 class Kokoro < Formula
   desc "Text-to-speech CLI using Kokoro-82M via CoreML on Apple Silicon"
   homepage "https://github.com/Jud/kokoro-coreml"
+  version "0.9.4"
   url "https://github.com/Jud/kokoro-coreml/releases/download/v0.9.4/kokoro-0.9.4-macos-arm64.tar.gz"
   sha256 "10e1a2b21192a7c78b83abf0890123381c0ce1208b4ae6590bf3b27ebe8d3380"
   license "Apache-2.0"
