@@ -3,7 +3,7 @@ class Kokoro < Formula
   homepage "https://github.com/Jud/kokoro-coreml"
   version "0.10.0"
   url "https://github.com/Jud/kokoro-coreml/releases/download/v0.10.0/kokoro-0.10.0-macos-arm64.tar.gz"
-  sha256 "34bb0586d49299d380c7a232f14100822a15026c6bf7144711778b355501063e"
+  sha256 "d358816fe6d2644ee26c3c21d8f5d44d5027e020c9a489906fc2d223e7503d79"
   license "Apache-2.0"
 
   depends_on :macos
