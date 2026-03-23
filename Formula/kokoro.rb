@@ -13,7 +13,7 @@ class Kokoro < Formula
     Dir["*.bundle"].each { |b| libexec.install b }
 
     # Symlink bundles next to the bin wrapper so NSBundle can find them
-    Dir[libexec/"*.bundle"].each { |b| (bin/File.basename(b)).make_relative_symlink(b) }
+    Dir[libexec/"*.bundle"].each { |b| ln_s b, bin/File.basename(b) }
 
     (bin/"kokoro").write <<~SH
       #!/bin/bash
